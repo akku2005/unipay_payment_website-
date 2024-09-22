@@ -1,0 +1,16 @@
+.ready-to-simplify-section {
+    background-image: url('../assets/images/pexels-danbuilds-633409.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the image in place while scrolling */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Set text color to white */
+    padding: 3rem 0; /* Adjust padding as needed */
+  }
+  
+  @media (min-width: 768px) {
+    .ready-to-simplify-section {
+      padding: 6rem 0; /* Adjust padding for larger screens */
+    }
+  }
+  
