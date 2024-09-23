@@ -1,47 +1,46 @@
 .integration-container {
-    overflow: hidden; /* Hide overflow to create a seamless scroll effect */
-    position: relative; /* Position relative for blur effects */
+    overflow: hidden; 
+    position: relative; 
   }
   
-  .scroll-wrapper {
-    display: flex; /* Flexbox to arrange items in a row */
-    animation: scroll 20s linear infinite; /* Smooth scrolling effect */
+  
+.scroll-wrapper {
+  display: flex; 
+  animation: scroll 10s linear infinite; 
+}
+
+.partner {
+  flex: 0 0 auto; 
+  width: 200px;
+  height: 120px; 
+  margin: 0 10px; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); 
   }
-  
-  .partner {
-    flex: 0 0 auto; /* Prevent shrinking */
-    width: 200px;
-    height: 120px; 
-    margin: 0 10px; 
+  100% {
+    transform: translateX(-50%); 
   }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0); /* Start from the left */
-    }
-    100% {
-      transform: translateX(-100%); /* Move to the left */
-    }
-  }
-  .blur-effect {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10%; /* Adjust the width of the blur effect */
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for the blur */
-    backdrop-filter: blur(100px); /* Apply the blur effect */
-    pointer-events: none; /* Allow interactions through the blur */
-    z-index: 2; /* Ensure the blur effect is on top */
-  }
-  
- 
-  
-  
-  .left-blur {
-    left: 0;
-  }
-  
-  .right-blur {
-    right: 0; /* Position right blur */
-  }
-  
+}
+
+
+.blur-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* Adjust the width of the blur effect */
+  pointer-events: none; /* Allow interactions through the blur */
+  z-index: 2; /* Ensure the blur effect is on top */
+}
+
+.left-blur {
+  left: 0;
+  background: linear-gradient(to right, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0)); 
+}
+
+.right-blur {
+  right: 0;
+  background: linear-gradient(to left, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0)); 
+}

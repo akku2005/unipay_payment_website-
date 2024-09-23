@@ -1,6 +1,6 @@
 import React from "react";
-import IndustriesCard from "../components/Card/IndustriesCard"; // Correct the import path for IndustriesCard
-import icons from "../constants/Ions"; // Correct the path for icons
+import IndustriesCard from "../../components/Card/IndustriesCard"; // Correct the import path for IndustriesCard
+import icons from "../../constants/Ions"; // Correct the path for icons
 
 const TrustedAcrossIndustries = () => {
   const industriesData = [

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import Card from "../components/Card/Card";
-import icons from "../constants/Ions"; // Ensure the path is correct
+import Card from "../../components/Card/Card";
+import icons from "../../constants/Ions"; // Ensure the path is correct
 import gsap from "gsap";
 
 const Features = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../components/Button"; // Adjust the path if needed
-import "../styles/ReadyToSimplify.css"; // Import your CSS file
+import Button from "../../components/Button"; // Adjust the path if needed
+import "../../styles/ReadyToSimplify.css"; // Import your CSS file
 
 const ReadyToSimplify = () => {
   return (

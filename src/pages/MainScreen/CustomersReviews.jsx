@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid"; // Import Heroicons
-import CustomerReview from "../components/Card/CustomerReview"; // Ensure the path is correct
-import avatar1 from "../assets/icons/man.png"; // Adjust the path for avatar1
-import avatar2 from "../assets/icons/924915.png"; // Adjust the path for avatar2
+import CustomerReview from "../../components/Card/CustomerReview"; // Ensure the path is correct
+import avatar1 from "../../assets/icons/man.png"; // Adjust the path for avatar1
+import avatar2 from "../../assets/icons/924915.png"; // Adjust the path for avatar2
 
 const CustomerReviews = () => {
   const reviews = [
