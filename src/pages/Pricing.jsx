@@ -41,7 +41,7 @@ const pricingData = [
 
 const PricingSection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-gray-100">
+    <section className="py-12 md:py-24 lg:py-32 bg-gray-100" id="pricing">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
           Pricing Plans

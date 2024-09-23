@@ -1,28 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Hero from "./pages/Hero";
-import Features from "./pages/Features";
-import IntegrationPartners from "./pages/IntegrationPartners";
-import TrustedAcrossIndustries from "./pages/TrustedAcrossIndustries";
-import CustomersReviews from "./pages/CustomersReviews";
-import Pricing from "./pages/Pricing";
-import ReadyToSimplify from "./pages/ReadyToSimplify";
-import Footer from "./components/Footer";
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// Lazy load the pages
+const Hero = lazy(() => import("./pages/Hero"));
+const Features = lazy(() => import("./pages/Features"));
+const IntegrationPartners = lazy(() => import("./pages/IntegrationPartners"));
+const TrustedAcrossIndustries = lazy(() =>
+  import("./pages/TrustedAcrossIndustries")
+);
+const CustomersReviews = lazy(() => import("./pages/CustomersReviews"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const ReadyToSimplify = lazy(() => import("./pages/ReadyToSimplify"));
+const Header = lazy(() => import("./components/Header"));
+const Footer = lazy(() => import("./components/Footer"));
+import Loader from "./components/Loader";
+
 function App() {
   return (
     <Router>
-      <Header />
-      <Hero />
-      <Features />
-      <IntegrationPartners />
-      <TrustedAcrossIndustries />
-      <CustomersReviews />
-      <Pricing />
-      <ReadyToSimplify />
-      <Footer />
-      {/* <Routes>
-        <Route></Route>
-      </Routes> */}
+      <Suspense fallback={<Loader />}>
+        <Header />
+        <Hero />
+        <Features />
+        <IntegrationPartners />
+        <TrustedAcrossIndustries />
+        <CustomersReviews />
+        <Pricing />
+        <ReadyToSimplify />
+        <Footer />
+      </Suspense>
     </Router>
   );
 }

@@ -1,18 +1,18 @@
 import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll"; // Import Link from react-scroll
+import { XIcon, MenuIcon } from "@heroicons/react/solid";
+import logo from "../../assets/icons/logo.jpg";
 import { Link } from "react-router-dom";
-import { XIcon, MenuIcon } from "@heroicons/react/solid"; // Import the Cross and Menu icons
-import logo from "../../assets/icons/logo.jpg"; // Import the logo
-
 const Header = () => {
-  const [showBanner, setShowBanner] = useState(true); // State to manage banner visibility
-  const [showNav, setShowNav] = useState(false); // State to manage navigation visibility on mobile
+  const [showBanner, setShowBanner] = useState(true);
+  const [showNav, setShowNav] = useState(false);
 
   const handleCloseBanner = () => {
-    setShowBanner(false); // Hide the banner when the cross button is clicked
+    setShowBanner(false);
   };
 
   const handleToggleNav = () => {
-    setShowNav(!showNav); // Toggle navigation visibility on mobile
+    setShowNav(!showNav);
   };
 
   return (
@@ -58,25 +58,31 @@ const Header = () => {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden lg:flex ml-auto flex gap-4 sm:gap-6">
-          <Link
+        <nav className="hidden lg:flex ml-auto flex gap-4 sm:gap-6 cursor-pointer">
+          <ScrollLink
+            to="features"
+            smooth={true}
+            duration={500}
             className="text-sm font-medium hover:text-blue-600 transition-colors"
-            to="/features"
           >
             Features
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
+            to="integrations"
+            smooth={true}
+            duration={500}
             className="text-sm font-medium hover:text-blue-600 transition-colors"
-            to="/integrations"
           >
             Integrations
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
+            to="pricing"
+            smooth={true}
+            duration={500}
             className="text-sm font-medium hover:text-blue-600 transition-colors"
-            to="/pricing"
           >
             Pricing
-          </Link>
+          </ScrollLink>
         </nav>
 
         <div className="hidden lg:block ml-6">
@@ -101,24 +107,30 @@ const Header = () => {
         {showNav && (
           <div className="fixed top-14 left-0 w-full bg-white border-b lg:hidden">
             <nav className="flex flex-col p-4">
-              <Link
+              <ScrollLink
+                to="features"
+                smooth={true}
+                duration={500}
                 className="text-sm font-medium hover:text-blue-600 transition-colors"
-                to="/features"
               >
                 Features
-              </Link>
-              <Link
+              </ScrollLink>
+              <ScrollLink
+                to="integrations"
+                smooth={true}
+                duration={500}
                 className="text-sm font-medium hover:text-blue-600 transition-colors"
-                to="/integrations"
               >
                 Integrations
-              </Link>
-              <Link
+              </ScrollLink>
+              <ScrollLink
+                to="pricing"
+                smooth={true}
+                duration={500}
                 className="text-sm font-medium hover:text-blue-600 transition-colors"
-                to="/pricing"
               >
                 Pricing
-              </Link>
+              </ScrollLink>
             </nav>
             <div className="p-4">
               <button className="px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl">
