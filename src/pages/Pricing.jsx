@@ -1,4 +1,5 @@
 import React from "react";
+import { CheckIcon } from "@heroicons/react/solid"; // Import the tick/check icon from Heroicons
 
 const pricingData = [
   {
@@ -53,11 +54,16 @@ const PricingSection = () => {
                 {plan.price}
               </p>
               <p className="mb-4">{plan.description}</p>
-              <ul className="list-disc list-inside mb-4">
+
+              <ul className="mb-4">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
+                  <li key={idx} className="flex items-center mb-2">
+                    <CheckIcon className="h-5 w-5 text-green-500 mr-2" />
+                    {feature}
+                  </li>
                 ))}
               </ul>
+
               <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                 Get Started
               </button>

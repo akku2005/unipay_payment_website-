@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { XIcon } from "@heroicons/react/solid"; // Import the Cross icon
+import { XIcon, MenuIcon } from "@heroicons/react/solid"; // Import the Cross and Menu icons
 import logo from "../../assets/icons/logo.jpg"; // Import the logo
 
 const Header = () => {
   const [showBanner, setShowBanner] = useState(true); // State to manage banner visibility
+  const [showNav, setShowNav] = useState(false); // State to manage navigation visibility on mobile
 
   const handleCloseBanner = () => {
     setShowBanner(false); // Hide the banner when the cross button is clicked
+  };
+
+  const handleToggleNav = () => {
+    setShowNav(!showNav); // Toggle navigation visibility on mobile
   };
 
   return (
@@ -15,7 +20,7 @@ const Header = () => {
       {showBanner && (
         <div className="bg-indigo-600 fixed w-full z-10">
           <div className="max-w-screen-xl mx-auto px-4 py-3 text-white sm:text-center md:px-8 flex justify-between items-center">
-            <p className="font-medium">
+            <p className="font-medium text-xs sm:text-sm md:text-base">
               We just launched a new version of our Payment System!{" "}
               <a
                 href="javascript:(0)"
@@ -45,7 +50,7 @@ const Header = () => {
       <header
         className={`px-4 lg:px-6 h-14 flex items-center fixed w-full bg-white z-10 border-b ${
           showBanner ? "mt-12" : ""
-        }`} // Adjusted margin
+        }`}
       >
         <Link className="flex items-center justify-center" to="/">
           <img src={logo} alt="UniPay Logo" className="w-10 h-10" />
@@ -53,7 +58,7 @@ const Header = () => {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+        <nav className="hidden lg:flex ml-auto flex gap-4 sm:gap-6">
           <Link
             className="text-sm font-medium hover:text-blue-600 transition-colors"
             to="/features"
@@ -74,11 +79,54 @@ const Header = () => {
           </Link>
         </nav>
 
-        <div className="ml-6">
+        <div className="hidden lg:block ml-6">
           <button className="px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl">
             Get Started
           </button>
         </div>
+
+        {/* Mobile Navigation */}
+        <button
+          className="lg:hidden flex justify-center items-center w-10 h-10 ml-auto"
+          onClick={handleToggleNav}
+        >
+          {showNav ? (
+            <XIcon className="w-6 h-6" />
+          ) : (
+            <MenuIcon className="w-6 h-6" />
+          )}
+        </button>
+
+        {/* Mobile Navigation Links */}
+        {showNav && (
+          <div className="fixed top-14 left-0 w-full bg-white border-b lg:hidden">
+            <nav className="flex flex-col p-4">
+              <Link
+                className="text-sm font-medium hover:text-blue-600 transition-colors"
+                to="/features"
+              >
+                Features
+              </Link>
+              <Link
+                className="text-sm font-medium hover:text-blue-600 transition-colors"
+                to="/integrations"
+              >
+                Integrations
+              </Link>
+              <Link
+                className="text-sm font-medium hover:text-blue-600 transition-colors"
+                to="/pricing"
+              >
+                Pricing
+              </Link>
+            </nav>
+            <div className="p-4">
+              <button className="px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl">
+                Get Started
+              </button>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );

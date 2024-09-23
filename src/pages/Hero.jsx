@@ -6,20 +6,20 @@ import heroImage from "../assets/images/DasjboardImage.jpg"; // Replace with the
 const Hero = () => {
   return (
     <main className="flex-1">
-      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r bg-slate-100 text-black h-[1120px]">
+      <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r bg-slate-100 text-black pt-32">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-black">
+              <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
                 Unified Payment Solutions for Modern Businesses
               </h1>
-              <p className="mx-auto max-w-[700px] text-xl text-black md:text-2xl">
+              <p className="mx-auto max-w-[90%] sm:max-w-[700px] text-lg text-black md:text-xl">
                 Simplify your payment processes with UniPay's all-in-one
                 platform
               </p>
             </div>
-            <div className="space-x-8">
-              <button className="bg-gray-200 text-blue-600 hover:bg-blue-50 p-2 rounded-md">
+            <div className="space-x-0 sm:space-x-4 flex flex-col sm:flex-row">
+              <button className="bg-gray-200 text-blue-600 hover:bg-blue-50 p-2 rounded-md mb-2 sm:mb-0">
                 Start Free Trial
               </button>
               <button
@@ -31,15 +31,14 @@ const Hero = () => {
               </button>
             </div>
             {/* Feature Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt- mb-20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 mb-20">
               <Card imageSrc={icons.creditCard} text="Multiple Gateways" />
               <Card imageSrc={icons.power} text="Fast Integration" />
               <Card imageSrc={icons.padlock} text="Bank-grade Security" />
             </div>
             {/* Image at the Bottom */}
-            <div className="mt-24">
+            <div className="mt-12">
               <img
-                style={{ marginTop: "36px", marginBottom: "2px" }}
                 src={heroImage}
                 alt="Hero bottom illustration"
                 className="w-full max-w-8xl mx-auto rounded-2xl"

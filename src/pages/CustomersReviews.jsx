@@ -37,25 +37,36 @@ const CustomerReviews = () => {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
+    <section className="w-full py-8 sm:py-12 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-8 sm:mb-12">
           What Our Customers Say
         </h2>
         <div className="flex flex-col items-center justify-center">
           <CustomerReview {...reviews[currentReviewIndex]} />
+
           <div className="flex justify-center w-full mt-4 space-x-4">
             <button
               onClick={handlePrev}
-              className="bg-gray-100 text-black rounded-full p-2 hover:bg-gray-200"
+              className="bg-gray-100 text-black rounded-full p-2 hover:bg-gray-200 focus:outline-none focus:ring focus:ring-gray-300"
             >
-              <ChevronLeftIcon className="h-6 w-6" />
+              <ChevronLeftIcon className="h-6 w-6 sm:h-8 sm:w-8" />
             </button>
+            <div className="flex mt-4 space-x-2">
+              {reviews.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-5 h-2 rounded-full ${
+                    index === currentReviewIndex ? "bg-black" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
             <button
               onClick={handleNext}
-              className="bg-gray-100 text-black rounded-full p-2 hover:bg-gray-200"
+              className="bg-gray-100 text-black rounded-full p-2 hover:bg-gray-200 focus:outline-none focus:ring focus:ring-gray-300"
             >
-              <ChevronRightIcon className="h-6 w-6" />
+              <ChevronRightIcon className="h-6 w-6 sm:h-8 sm:w-8" />
             </button>
           </div>
         </div>
