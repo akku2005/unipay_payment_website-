@@ -11,7 +11,7 @@ const Card = ({ icon, title, description, className }) => {
         )}
         <h3 className="text-lg font-semibold text-center">{title}</h3>
       </div>
-      <p>{description}</p>
+      <p style={{ fontFamily: "Indie Flower, cursive" }}>{description}</p>
     </div>
   );
 };

@@ -39,8 +39,11 @@ const CustomerReviews = () => {
   return (
     <section className="w-full py-8 sm:py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-8 sm:mb-12">
-          What Our Customers Say
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center mb-8 sm:mb-12">
+          What Our{" "}
+          <span style={{ fontFamily: "Dancing Script, cursive" }}>
+            Customers Say
+          </span>
         </h2>
         <div className="flex flex-col items-center justify-center">
           <CustomerReview {...reviews[currentReviewIndex]} />

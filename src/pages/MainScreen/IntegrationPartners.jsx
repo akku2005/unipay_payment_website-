@@ -44,7 +44,7 @@ const IntegrationPartners = () => {
       }}
     >
       <div className="container px-4 md:px-6 integration-container relative">
-        <h2 className="text-3xl font-semibold tracking-tighter sm:text-5xl text-center mb-12 relative ml-24">
+        <h2 className="text-3xl font-semibold tracking-tighter sm:text-5xl text-center mb-12 relative ">
           Integration{" "}
           <span style={{ fontFamily: "Dancing Script, cursive" }}>
             Partners
@@ -53,12 +53,12 @@ const IntegrationPartners = () => {
             src={illustration}
             alt="Highlight Illustration"
             ref={illustrationRef}
-            className="inline-block w-24 ml-10 mb-12 mt-10"
+            className="inline-block w-24 ml-10 mb-12 mt-10 hide-on-mobile" // Add the class to hide on mobile
             style={{
               opacity: 0, // Start with 0 opacity
               transform: "rotate(-50deg)", // Rotate the image
-              position: "relative", // Ensures it stays in flow with the text
-              top: "-20px", // Pulls the image upwards
+              position: "relative",
+              top: "-20px",
             }}
           />
         </h2>

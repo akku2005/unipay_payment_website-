@@ -44,3 +44,9 @@
   right: 0;
   background: linear-gradient(to left, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0)); 
 }
+
+@media (max-width: 640px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
