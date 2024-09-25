@@ -16,11 +16,14 @@ const Hero = () => {
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="space-y-2">
               <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
-                Unified Payment Solutions for Modern Businesses
+                Unified Payment Solutions for Modern{" "}
+                <span className="text-blue-500">Businesses</span>
+                <span className="text-3xl text-rose-500">.</span>
               </h1>
               <p className="mx-auto max-w-[90%] sm:max-w-[700px] text-lg text-black md:text-xl">
-                Simplify your payment processes with UniPay's all-in-one
-                platform
+                Simplify your payment processes with{" "}
+                <span className="text-rose-500 font-semibold">UniPay's</span>{" "}
+                all-in-one platform
               </p>
             </div>
             <div className="space-x-0 sm:space-x-4 flex flex-col sm:flex-row">

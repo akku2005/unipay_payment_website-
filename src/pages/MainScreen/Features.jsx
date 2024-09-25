@@ -13,48 +13,46 @@ const Features = () => {
           const index = entry.target.getAttribute("data-index");
 
           if (entry.isIntersecting) {
-            const direction = index % 4 === 0 ? -100 : 100; // Alternate directions
+            const direction = index % 2 === 0 ? -50 : 50; // Alternate directions (reduce the distance)
 
             // Animate the card entering the viewport
             gsap.fromTo(
               entry.target,
-              { x: direction, opacity: 0 },
-              { x: 0, opacity: 1, duration: 1, ease: "power2.out" }
+              { x: direction, opacity: 0 }, // Starting position
+              { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" } // Ending position
             );
 
-            // Optionally, unobserve after animation
+            // Unobserve after animation
             observer.unobserve(entry.target);
           } else {
             // Reset the card position when it goes out of view
-            const direction = index % 4 === 0 ? -100 : 100; // Reset direction
-            gsap.set(entry.target, { x: direction, opacity: 0 });
-
-            // Re-observe the card to allow animation again
-            observer.observe(entry.target);
+            gsap.set(entry.target, { x: 0, opacity: 0 }); // Reset position to avoid layout shift
+            observer.observe(entry.target); // Re-observe to allow animation again
           }
         });
       },
-      { threshold: 0.5 }
-    ); // Trigger when 50% of the card is visible
+      { threshold: 0.5 } // Trigger when 50% of the card is visible
+    );
 
+    // Observe all cards
     cardsRef.current.forEach((card) => {
-      observer.observe(card);
+      if (card) observer.observe(card);
     });
 
     return () => {
       cardsRef.current.forEach((card) => {
-        observer.unobserve(card);
+        if (card) observer.unobserve(card); // Unobserve on cleanup
       });
     };
   }, []);
 
   return (
-    <section id="features" className="w-full py-12 md:py-24 lg:py-32 ">
-      <div className="container px-4 md:px-6">
+    <section id="features" className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
           Powerful Features
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               icon: icons.creditCard,
@@ -97,6 +95,7 @@ const Features = () => {
               key={index}
               ref={(el) => (cardsRef.current[index] = el)} // Store the reference for each card
               data-index={index} // Add data attribute for index
+              className="flex justify-center" // Centering the card on smaller screens
             >
               <Card
                 icon={feature.icon}

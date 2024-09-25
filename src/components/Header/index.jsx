@@ -22,8 +22,6 @@ const Header = () => {
   // Function to handle "Learn more" click
   const handleLearnMore = (e) => {
     e.preventDefault(); // Prevent default anchor behavior
-    // Implement any desired action, e.g., scrolling to a section or opening a modal
-    // For example, scroll to "features" section:
     const featuresSection = document.getElementById("features");
     if (featuresSection) {
       featuresSection.scrollIntoView({ behavior: "smooth" });
@@ -72,7 +70,6 @@ const Header = () => {
         }`}
       >
         {isHome ? (
-          // If on home page, use ScrollLink to scroll to Hero
           <ScrollLink
             to="home"
             smooth={true}
@@ -80,19 +77,16 @@ const Header = () => {
             className="flex items-center justify-center cursor-pointer"
           >
             <img src={logo} alt="UniPay Logo" className="w-10 h-10" />
-            <span className="ml-4 text-xl font-bold">UniPay</span>
+            <span className="ml-2 text-xl font-bold">UniPay</span>
           </ScrollLink>
         ) : (
-          // If not on home page, use Link to navigate to home
           <Link className="flex items-center justify-center" to="/">
             <img src={logo} alt="UniPay Logo" className="w-10 h-10" />
-            <span className="ml-4 text-xl font-bold">UniPay</span>
+            <span className="ml-2 text-xl font-bold">UniPay</span>
           </Link>
         )}
 
-        {/* Navigation Links */}
         <nav className="hidden lg:flex ml-auto flex gap-4 sm:gap-6 cursor-pointer">
-          {/* If on home page, use ScrollLink, else use regular Links or navigate to home first */}
           {isHome ? (
             <>
               <ScrollLink
@@ -121,7 +115,6 @@ const Header = () => {
               </ScrollLink>
             </>
           ) : (
-            // If not on home, clicking these should navigate to home and then scroll
             <>
               <Link
                 to="/#features"
@@ -151,7 +144,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Button */}
         <button
           className="lg:hidden flex justify-center items-center w-10 h-10 ml-auto"
           onClick={handleToggleNav}
@@ -165,7 +158,7 @@ const Header = () => {
 
         {/* Mobile Navigation Links */}
         {showNav && (
-          <div className="fixed top-14 left-0 w-full bg-white border-b lg:hidden z-20">
+          <div className="fixed top-14 left-0 w-full bg-white border-b lg:hidden z-20 shadow-lg">
             <nav className="flex flex-col p-4">
               {isHome ? (
                 <>

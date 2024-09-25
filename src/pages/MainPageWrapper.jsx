@@ -3,7 +3,7 @@ import CustomersReviews from "./MainScreen/CustomersReviews";
 import Features from "./MainScreen/Features";
 import Hero from "./MainScreen/Hero";
 import IntegrationPartners from "./MainScreen/IntegrationPartners";
-import Pricing from "./MainScreen/Pricing";
+import SecuritySection from "./MainScreen/SecuritySection";
 import ReadyToSimplify from "./MainScreen/ReadyToSimplify";
 import TrustedAcrossIndustries from "./MainScreen/TrustedAcrossIndustries";
 import Header from "../components/Header";
@@ -17,7 +17,7 @@ const MainPageWrapper = () => {
       <IntegrationPartners />
       <TrustedAcrossIndustries />
       <CustomersReviews />
-      <Pricing />
+      <SecuritySection />
       <ReadyToSimplify />
       <Footer />
     </div>

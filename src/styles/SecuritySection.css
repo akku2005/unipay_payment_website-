@@ -1,0 +1,131 @@
+.card {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0 auto;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: #f8f9fa;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  font-size: 16px;
+  transform: rotateY(180deg);
+}
+
+.card-back h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-back p {
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+.card-back button {
+
+  
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) { /* Tablet and smaller devices */
+  .card {
+    width: 250px; /* Adjust card width */
+    height: 350px; /* Adjust card height */
+  }
+
+  .card-front {
+    font-size: 20px; /* Smaller font size for smaller screens */
+  }
+
+  .card-back {
+    padding: 15px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .card-back h3 {
+    font-size: 18px;
+  }
+
+  .card-back p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .card-back button {
+    padding: 5px 10px;
+    font-size: 12px; /* Smaller button text */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile devices */
+  .card {
+    width: 220px; /* Further adjust card width for mobile screens */
+    height: 320px; /* Further adjust card height for mobile screens */
+  }
+
+  .card-front {
+    font-size: 18px; /* Even smaller font size */
+  }
+
+  .card-back {
+    padding: 10px; /* Reduce padding for mobile */
+    font-size: 13px; /* Smaller font size for mobile */
+  }
+
+  .card-back h3 {
+    font-size: 16px; /* Smaller title size */
+  }
+
+  .card-back p {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .card-back button {
+    padding: 4px 8px;
+    font-size: 11px; /* Even smaller button text */
+  }
+}

@@ -24,11 +24,11 @@ const TrustedAcrossIndustries = () => {
   return (
     <section
       id="features"
-      className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+      className="w-full py-12 md:py-24 lg:py-32 bg-slate-100"
     >
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-20">
-          Trusted Across Industries
+        <h2 className="text-3xl font-medium tracking-tighter sm:text-5xl text-center mb-20">
+          Trusted Across <span>Industries</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {industriesData.map((industry, index) => (
