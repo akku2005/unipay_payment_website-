@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Payments: What's Next?",
+    "excerpt": "Explore the emerging trends in payment systems...",
+    "published_at": "2024-09-15",
+    "author": "Akashkumar Sahu",
+    "slug": "the-future-of-payments"
+  },
+  {
+    "id": 2,
+    "title": "How UniPay Simplifies Payments",
+    "excerpt": "A closer look at the features that make UniPay...",
+    "published_at": "2024-08-10",
+    "author": "John Doe",
+    "slug": "how-unipay-simplifies-payments"
+  },
+  {
+    "id": 3,
+    "title": "Understanding Payment Security in 2024",
+    "excerpt": "Dive into the latest trends in payment security and fraud prevention...",
+    "published_at": "2024-07-25",
+    "author": "Jane Smith",
+    "slug": "understanding-payment-security"
+  }
+]

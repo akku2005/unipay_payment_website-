@@ -106,12 +106,12 @@ const Header = () => {
                 Integrations
               </ScrollLink>
               <ScrollLink
-                to="pricing"
+                to="about"
                 smooth={true}
                 duration={500}
                 className="text-sm font-medium hover:text-blue-600 transition-colors"
               >
-                Pricing
+                About
               </ScrollLink>
             </>
           ) : (
@@ -129,10 +129,10 @@ const Header = () => {
                 Integrations
               </Link>
               <Link
-                to="/#pricing"
+                to="/#about"
                 className="text-sm font-medium hover:text-blue-600 transition-colors"
               >
-                Pricing
+                About
               </Link>
             </>
           )}
@@ -181,13 +181,13 @@ const Header = () => {
                     Integrations
                   </ScrollLink>
                   <ScrollLink
-                    to="pricing"
+                    to="about"
                     smooth={true}
                     duration={500}
                     className="text-sm font-medium hover:text-blue-600 transition-colors mb-2"
                     onClick={() => setShowNav(false)}
                   >
-                    Pricing
+                    About
                   </ScrollLink>
                 </>
               ) : (
@@ -207,11 +207,11 @@ const Header = () => {
                     Integrations
                   </Link>
                   <Link
-                    to="/#pricing"
+                    to="/#about"
                     className="text-sm font-medium hover:text-blue-600 transition-colors mb-2"
                     onClick={() => setShowNav(false)}
                   >
-                    Pricing
+                    About
                   </Link>
                 </>
               )}

@@ -1,16 +1,14 @@
-// src/components/Hero.jsx
-
 import React from "react";
 import Card from "../../components/Card";
 import icons from "../../constants/Ions";
-import heroImage from "../../assets/images/DasjboardImage.jpg"; // Replace with the actual path of your image
+import heroImage from "../../assets/images/DasjboardImage.jpg";
 
 const Hero = () => {
   return (
     <main className="flex-1">
       <section
         className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r bg-slate-100 text-black pt-32"
-        id="home" // Added ID for scrolling
+        id="home"
       >
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">

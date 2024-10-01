@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Akashkumar Sahu",
+    "role": "Full Stack MERN Developer",
+    "bio": "Passionate about creating beautiful and responsive web applications using React, Node.js, Express, and MongoDB.",
+    "profilePic": "https://via.placeholder.com/150",
+    "linkedin": "https://www.linkedin.com/in/akashkumar-sahu/"
+  }
+]

@@ -38,7 +38,7 @@ const pricingData = [
 
 const SecuritySection = () => {
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-gray-100" id="pricing">
+    <section className="py-12 md:py-24 lg:py-32 bg-gray-100" id="about">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-medium tracking-tighter sm:text-5xl text-center mb-12">
           Built for organizations with the{" "}
