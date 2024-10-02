@@ -10,22 +10,31 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/features"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Features
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/integrations"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Integrations
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/pricing"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link to="/faq" className="text-gray-600 hover:text-blue-600">
                   FAQ
                 </Link>
               </li>
@@ -35,22 +44,34 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/about-us"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/careers"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/partners"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Partners
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/contact-us"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -73,12 +94,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/support"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Support
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/documentation"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Documentation
                 </Link>
               </li>
@@ -88,22 +115,34 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/legal/terms-of-service"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/legal/privacy-policy"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/legal/cookie-policy"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Cookie Policy
                 </Link>
               </li>
               <li>
-                <Link to="#" className="text-gray-600 hover:text-blue-600">
+                <Link
+                  to="/legal/compliance"
+                  className="text-gray-600 hover:text-blue-600"
+                >
                   Compliance
                 </Link>
               </li>

@@ -139,9 +139,11 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:block ml-6">
-          <button className="px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl hover:from-emerald-400 hover:to-indigo-500 transition-all">
-            Get Started
-          </button>
+          <Link to="/getting-started">
+            <button className="px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl hover:from-emerald-400 hover:to-indigo-500 transition-all">
+              Get Started
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Navigation Button */}
@@ -217,9 +219,11 @@ const Header = () => {
               )}
             </nav>
             <div className="p-4">
-              <button className="w-full px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl hover:from-emerald-400 hover:to-indigo-500 transition-all">
-                Get Started
-              </button>
+              <Link to="/signup">
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-emerald-300 to-indigo-400 text-white rounded-3xl hover:from-emerald-400 hover:to-indigo-500 transition-all">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
         )}

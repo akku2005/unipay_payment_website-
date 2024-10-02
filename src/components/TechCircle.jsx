@@ -99,9 +99,9 @@ const TechCircle = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[400px] bg-gray-100 relative mt-10">
+    <div className="flex justify-center items-center h-auto bg-gray-100 relative mt-10 py-6">
       {/* Central Icon */}
-      <div className="absolute bg-white p-6 rounded-full z-0">
+      <div className="absolute bg-white p-4 rounded-full z-0">
         <img
           src={UniPayLogo}
           alt="UniPay Logo"
@@ -112,7 +112,7 @@ const TechCircle = () => {
       {/* Rotating Circle with Dotted Border */}
       <div
         ref={circleRef}
-        className="relative w-80 h-80 rounded-full border-2 border-dotted border-gray-400 flex justify-center items-center"
+        className="relative w-60 h-60 md:w-80 md:h-80 rounded-full border-2 border-dotted border-gray-400 flex justify-center items-center"
       >
         {/* Icons positioned around the circle */}
         {iconsData.map((icon) => (
@@ -120,10 +120,14 @@ const TechCircle = () => {
             key={icon.id}
             className="absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500 bg-white"
             style={icon.style}
-            onMouseEnter={() => handleMouseEnter(icon)}
-            onMouseLeave={handleMouseLeave}
           >
-            <img src={icon.src} alt={icon.alt} className="w-12 h-12" />
+            <img
+              src={icon.src}
+              alt={icon.alt}
+              className="w-10 h-10 md:w-12 md:h-12"
+              onMouseEnter={() => handleMouseEnter(icon)}
+              onMouseLeave={handleMouseLeave}
+            />
           </div>
         ))}
       </div>
