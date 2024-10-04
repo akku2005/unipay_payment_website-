@@ -30,7 +30,10 @@ const ContactUs = () => {
       <Header />
       <main className="flex-grow mt-44 mb-10 text-white">
         <div className="max-w-screen-lg mx-auto px-4 lg:px-8">
-          <h1 className="text-4xl font-bold text-center mb-10">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-center mb-10">
+            Contact <span className="text-rose-500">Us</span>
+            <span className="text-lime-500">.</span>
+          </h1>
 
           <section className="mb-12">
             <h2 className="text-3xl font-semibold mb-4">Get in Touch</h2>

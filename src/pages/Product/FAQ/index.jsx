@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
+
+const FAQItem = ({ question, answer, isOpen, onClick }) => (
+  <div
+    className={`faq-item border-b border-gray-300 p-4 ${isOpen ? "open" : ""}`}
+    onClick={onClick}
+  >
+    <div className="faq-question flex justify-between items-center cursor-pointer text-lg font-bold">
+      {question}
+      <span>{isOpen ? "✕" : "＋"}</span>
+    </div>
+    {isOpen && <div className="faq-answer text-gray-700 mt-2">{answer}</div>}
+  </div>
+);
+
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
   const faqs = [
     {
       question: "What is UniPay?",
@@ -48,16 +64,20 @@ const FAQ = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto px-4 py-12 ">
-        <h1 className="text-3xl font-semibold mb-6 mt-16">
-          Frequently Asked Questions
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-semibold mb-6 mt-16 text-center">
+          Frequently Asked <span className="text-rose-500">Questions</span>
+          <span className="text-lime-500">.</span>
         </h1>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-gray-300 rounded-lg p-4">
-              <h2 className="font-bold text-lg">{faq.question}</h2>
-              <p className="text-gray-700">{faq.answer}</p>
-            </div>
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            />
           ))}
         </div>
       </div>

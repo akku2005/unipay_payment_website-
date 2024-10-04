@@ -17,12 +17,7 @@ const CustomerReview = ({ avatar, review, name, rating, company }) => {
         alt={`${name}'s avatar`}
         className="h-16 w-16 rounded-full mx-auto mb-4"
       />
-      <p
-        className="text-gray-700 mb-4 text-sm sm:text-base"
-        style={{ fontFamily: "Shadows Into Light, cursive" }}
-      >
-        "{review}"
-      </p>
+      <p className="text-gray-700 mb-4 text-sm sm:text-base">"{review}"</p>
       <h3 className="text-lg font-semibold mb-1">{name}</h3>
       <div className="flex justify-center mb-2">{stars}</div>
       <p className="text-sm text-gray-500">{company}</p>

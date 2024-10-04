@@ -9,7 +9,8 @@ const CookiePolicy = () => {
       <main className="flex-grow mt-44 mb-10 text-white">
         <div className="max-w-screen-lg mx-auto px-4 lg:px-8">
           <h1 className="text-4xl font-bold text-center text-white mb-10">
-            Cookie Policy
+            Cookie <span className="text-rose-500">Policy</span>
+            <span className="text-lime-500">.</span>
           </h1>
 
           <section className="mb-12">

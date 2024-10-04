@@ -1,11 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import UniPayLogo from "../../assets/companyLogo/logo-color.png";
 const Footer = () => {
+  const location = useLocation();
+
+  // Scroll to the top whenever the location changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <footer className="w-full py-12 bg-gray-100">
+    <footer className="w-full py-12 bg-white">
       <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="flex flex-col items-start space-y-4">
+            <img
+              src={UniPayLogo}
+              alt="UniPay Payment Logo"
+              className="h-24 w-24"
+            />
+            <h2 className="text-xl font-semibold">UniPay Payment</h2>
+            <p className="text-gray-500">Powering secure payments since 2024</p>
+          </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
@@ -191,7 +207,7 @@ const Footer = () => {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.341 4.692-4.563 4.93.36.303.685.899.685 1.81 0 1.308-.012 2.367-.012 2.684 0 .266.18.579.687.48C21.137 20.197 24 16.445 24 12.017 24 6.484 19.523 2 12 2z"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.911.832.092-.646.35-1.088.636-1.338-2.22-.253-4.555-1.112-4.555-4.947 0-1.092.39-1.986 1.029-2.684-.103-.253-.446-1.27.098-2.646 0 0 .84-.27 2.75 1.026a9.564 9.564 0 012.502-.336c.849.004 1.704.114 2.501.336 1.909-1.296 2.748-1.026 2.748-1.026.546 1.375.203 2.393.1 2.646.64.698 1.028 1.592 1.028 2.684 0 3.845-2.338 4.691-4.565 4.939.36.31.678.922.678 1.858 0 1.34-.012 2.421-.012 2.751 0 .268.18.579.688.481C19.138 20.194 22 16.442 22 12.017 22 6.484 17.523 2 12 2z"
                     clipRule="evenodd"
                   />
                 </svg>
