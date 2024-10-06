@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../components/Card";
 import icons from "../../constants/Ions";
 import heroImage from "../../assets/images/DasjboardImage.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -25,13 +26,22 @@ const Hero = () => {
               </p>
             </div>
             <div className="space-x-0 sm:space-x-4 flex flex-col sm:flex-row">
-              <button className="bg-gray-200 text-blue-600 hover:bg-blue-50 p-2 rounded-md mb-2 sm:mb-0">
-                Start Free Trial
-              </button>
+              <Link to="/signup">
+                <button className="bg-gray-200 text-blue-600 hover:bg-blue-50 p-2 rounded-md mb-2 sm:mb-0">
+                  Start Free Trial
+                </button>
+              </Link>
+
               <button
                 variant="outline"
                 size="lg"
                 className="text-blue-600 border-blue-600 hover:bg-blue-100 p-2 rounded-md"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/917420987728?text=I%20would%20like%20to%20schedule%20a%20demo",
+                    "_blank"
+                  )
+                }
               >
                 Schedule Demo
               </button>

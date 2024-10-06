@@ -20,7 +20,6 @@ const Footer = () => {
               className="h-24 w-24"
             />
             <h2 className="text-xl font-semibold">UniPay Payment</h2>
-            <p className="text-gray-500">Powering secure payments since 2024</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Product</h3>
